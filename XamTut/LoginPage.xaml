@@ -1,5 +1,61 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamTut.LoginPage">
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="XamTut.LoginPage">
 	<ContentPage.Content>
+        <StackLayout Padding="20,200,20,200" BackgroundColor="Gray">
+        <RelativeLayout BackgroundColor="White">
+
+                
+            <Label Text="Login:" BackgroundColor="Transparent" FontSize="36" 
+                       
+                        x:Name="Login"                    
+                        RelativeLayout.HeightConstraint="{ConstraintExpression
+                        Type=RelativeToParent,
+                        Property=Height,
+                        Factor=0.1}"
+                        RelativeLayout.YConstraint="{ConstraintExpression
+                        Type=RelativeToParent,
+                        Property=Y,
+                        Factor=0.1}"
+                        RelativeLayout.XConstraint="{ConstraintExpression
+                        Type=RelativeToParent,
+                        Property=X,
+                        Factor=0,
+                        Constant=300}"
+                      
+                />
+
+                
+            <Entry Text="Username" BackgroundColor="Purple" x:Name="Username"
+                        WidthRequest="200"
+                        HeightRequest="50"
+                        RelativeLayout.YConstraint="{ConstraintExpression 
+                        Type=RelativeToView,
+                        ElementName=Login,
+                        Property=Height,
+                        Factor=1,
+                        Constant=20}"/>
+                
+            <Entry Text="Password" x:Name="Password" BackgroundColor="Red" IsPassword="true"
+                        RelativeLayout.YConstraint="{ConstraintExpression 
+                        Type=RelativeToView,
+                        ElementName=Username,
+                        Property=Height,
+                        Factor=1,
+                        Constant=40}"/>
+                
+            <Button Text="Submit" BackgroundColor="Silver" x:Name="Submit"
+                    RelativeLayout.YConstraint="{ConstraintExpression 
+                        Type=RelativeToView,
+                        ElementName=Password,
+                        Property=Height,
+                        Factor=1,
+                        Constant=20}"
+                        Clicked="Handle_Clicked"
+                />
+            
+        </RelativeLayout>
+            </StackLayout>
 	</ContentPage.Content>
 </ContentPage>
