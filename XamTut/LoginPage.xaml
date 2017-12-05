@@ -4,58 +4,47 @@
     x:Class="XamTut.LoginPage">
 	<ContentPage.Content>
         <StackLayout Padding="20,200,20,200" BackgroundColor="Gray">
-        <RelativeLayout BackgroundColor="White">
+            <Grid BackgroundColor="White" Padding="40, 0, 40, 0">
 
-                
-            <Label Text="Login:" BackgroundColor="Transparent" FontSize="36" 
+
+                <Label Text="Login:" 
+                       BackgroundColor="Transparent" 
                        
-                        x:Name="Login"                    
-                        RelativeLayout.HeightConstraint="{ConstraintExpression
-                        Type=RelativeToParent,
-                        Property=Height,
-                        Factor=0.1}"
-                        RelativeLayout.YConstraint="{ConstraintExpression
-                        Type=RelativeToParent,
-                        Property=Y,
-                        Factor=0.1}"
-                        RelativeLayout.XConstraint="{ConstraintExpression
-                        Type=RelativeToParent,
-                        Property=X,
-                        Factor=0,
-                        Constant=300}"
+                       x:Name="Login"
+                       Grid.ColumnSpan="4"
+                       Grid.Row="1"
                       
-                />
+                /> 
 
                 
-            <Entry Text="Username" BackgroundColor="Purple" x:Name="Username"
+                    <Entry Text="Username" BackgroundColor="AntiqueWhite" x:Name="Username"
                         WidthRequest="200"
                         HeightRequest="50"
-                        RelativeLayout.YConstraint="{ConstraintExpression 
-                        Type=RelativeToView,
-                        ElementName=Login,
-                        Property=Height,
-                        Factor=1,
-                        Constant=20}"/>
-                
-            <Entry Text="Password" x:Name="Password" BackgroundColor="Red" IsPassword="true"
-                        RelativeLayout.YConstraint="{ConstraintExpression 
-                        Type=RelativeToView,
-                        ElementName=Username,
-                        Property=Height,
-                        Factor=1,
-                        Constant=40}"/>
-                
-            <Button Text="Submit" BackgroundColor="Silver" x:Name="Submit"
-                    RelativeLayout.YConstraint="{ConstraintExpression 
-                        Type=RelativeToView,
-                        ElementName=Password,
-                        Property=Height,
-                        Factor=1,
-                        Constant=20}"
+                        Grid.ColumnSpan="4"
+                        Grid.Row="2"   
+                        
+                           />
+
+                    <Entry Text="Password" 
+                           x:Name="Password" 
+                           BackgroundColor="AntiqueWhite" 
+                           IsPassword="true"
+                           Grid.ColumnSpan="4"
+                           Grid.Row="3"
+                        />
+
+                    <Button Text="Submit" BackgroundColor="LightGreen" x:Name="Submit"
                         Clicked="Handle_Clicked"
-                />
-            
-        </RelativeLayout>
+                        Grid.Column="3"
+                        Grid.Row="4"
+                        TextColor="Black"
+                            />
+                    <BoxView HeightRequest="20" BackgroundColor="Transparent" 
+                             Grid.Row="5"
+                             Grid.ColumnSpan="4"/>
+
+
+            </Grid>
             </StackLayout>
 	</ContentPage.Content>
 </ContentPage>

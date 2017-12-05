@@ -12,15 +12,7 @@ namespace XamTut
         public LoginPage()
         {
             InitializeComponent();
-            //var contLay = new StackLayout();
-            //contLay.Children.Add(contLay);
-            //var relativeLayout = new RelativeLayout();
-            //var login = new Label{Text="Login: ", FontSize=36,  };
-            //relativeLayout.Children.Add(login, );
-
-
-
-            //this.Content = contLay;
+            if () { }
         }
 
 
