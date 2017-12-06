@@ -1,15 +1,16 @@
 ﻿<Properties StartupConfiguration="{B42E6633-E7C1-4AC3-AC48-8B2555A2D12C}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="XamTut/LoginPage.xaml">
     <Files>
-      <File FileName="XamTut/LoginPage.xaml" Line="22" Column="47" />
+      <File FileName="XamTut/LoginPage.xaml" Line="51" Column="1" />
       <File FileName="XamTut/LoginPage.xaml.cs" Line="19" Column="52" />
       <File FileName="XamTut/ToolsPage.xaml" Line="12" Column="1" />
       <File FileName="XamTut/ToolsPage.xaml.cs" Line="1" Column="1" />
       <File FileName="XamTut/App.xaml" Line="19" Column="1" />
       <File FileName="XamTut/App.xaml.cs" Line="7" Column="43" />
+      <File FileName="Droid/packages.config" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

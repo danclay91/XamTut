@@ -7,18 +7,45 @@ namespace XamTut
 {
     public partial class LoginPage : ContentPage
     {
-        
 
+        String userString, Password;
         public LoginPage()
         {
             InitializeComponent();
-            if () { }
+            if (Device.Idiom == TargetIdiom.Tablet)
+            {
+                Login.FontSize = 36;
+            }
+            else Login.FontSize = 24;
+
+
+
+
+
         }
 
 
-        void Handle_Clicked(object sender, System.EventArgs e)
+        void Handle_Submit(object sender, System.EventArgs e)
         {
-            throw new NotImplementedException();
+            DisplayAlert("Alert", userString, "Alert");
+        }
+
+
+        void Handle_Username(object sender, System.EventArgs e)
+        {
+            Set_User(sender as Entry);
+        }
+        void Handle_Password(object sender, System.EventArgs e)
+        {
+            Set_Pass(sender as Entry);
+        }
+        void Set_User(object sender)
+        {
+            userString = (sender as Entry).Text;
+        }
+        void Set_Pass(object sender)
+        {
+            Password = (sender as Entry).Text;
         }
 
     }
