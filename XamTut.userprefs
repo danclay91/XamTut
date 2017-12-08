@@ -1,13 +1,15 @@
 ﻿<Properties StartupConfiguration="{B42E6633-E7C1-4AC3-AC48-8B2555A2D12C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="XamTut/LoginPage.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="XamTut/MessageTiles.xaml.cs">
     <Files>
-      <File FileName="XamTut/LoginPage.xaml" Line="51" Column="1" />
-      <File FileName="XamTut/LoginPage.xaml.cs" Line="19" Column="52" />
+      <File FileName="XamTut/LoginPage.xaml" Line="46" Column="17" />
+      <File FileName="XamTut/LoginPage.xaml.cs" Line="11" Column="1" />
       <File FileName="XamTut/ToolsPage.xaml" Line="12" Column="1" />
       <File FileName="XamTut/ToolsPage.xaml.cs" Line="1" Column="1" />
       <File FileName="XamTut/App.xaml" Line="19" Column="1" />
       <File FileName="XamTut/App.xaml.cs" Line="7" Column="43" />
       <File FileName="Droid/packages.config" Line="1" Column="1" />
+      <File FileName="XamTut/MessageTiles.xaml" Line="6" Column="1" />
+      <File FileName="XamTut/MessageTiles.xaml.cs" Line="11" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -15,7 +17,7 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.XamTut.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.006C4177-8E95-4A30-BE07-BC5751B0B81F">
+  <MonoDevelop.Ide.ItemProperties.XamTut.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.4C27AAA0-9A1C-48D8-A78C-2DCFD97F6282">
     <MonoDevelop.MacDev.AppleDevelopmentTeam />
   </MonoDevelop.Ide.ItemProperties.XamTut.iOS>
   <MultiItemStartupConfigurations />

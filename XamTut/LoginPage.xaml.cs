@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 
 using Xamarin.Forms;
 
@@ -27,7 +28,7 @@ namespace XamTut
 
         void Handle_Submit(object sender, System.EventArgs e)
         {
-            DisplayAlert("Alert", userString, "Alert");
+            WebRequest request = WebRequest.Create("http://wwww.");
         }
 
 
