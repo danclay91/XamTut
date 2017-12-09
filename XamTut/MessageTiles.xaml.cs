@@ -1,25 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
+
 using Xamarin.Forms;
 
-
+/*
+ * This is the message tile used to display messages in the conversation page It takes a message object and time string
+ * 
+ */
 namespace XamTut
 {
     public partial class MessageTiles : ContentView
     {
-        String sender, receiver, message;
-        public MessageTiles(String sender, String receiver, String message )
+        
+        object message, timeString;
+        public MessageTiles(Message message, String timeString)
         {
-            this.sender = sender;
-            this.receiver = receiver;
+            
             this.message = message;
-            InitializeComponent();
+            this.timeString = timeString;
+            InitializeComponent(); 
 
-            //DateTime dateTime = new DateTime();
-            //TimeStamp.Text = dateTime.ToString();
-            Message.Text = message;
+            Message.Text = message.getMessageBody();
+            TimeStamp.Text = timeString;
+            Padding = new Thickness(0, 20, 0, 0);
+
+
         }
 
-        
+       
     }
 }
