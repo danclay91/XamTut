@@ -4,6 +4,7 @@ using System.Net;
 
 using Xamarin.Forms;
 
+
 namespace XamTut
 {
     public partial class LoginPage : ContentPage
@@ -19,10 +20,11 @@ namespace XamTut
             }
             else Login.FontSize = 24;
 
-
-
-
-
+            var messageTile = new MessageTiles("Andrew","Watson","Message");
+            messageTile.HeightRequest = 34;
+            messageTile.WidthRequest = 30;
+            messageTile.IsEnabled = true;
+            griddy.Children.Add(messageTile);
         }
 
 

@@ -4,9 +4,9 @@
     x:Class="XamTut.LoginPage">
 	<ContentPage.Content>
         <StackLayout Padding="20,200,20,200" BackgroundColor="Gray">
-            <Grid BackgroundColor="White" Padding="40, 0, 40, 0">
+            <Grid BackgroundColor="White" Padding="40, 0, 40, 0" x:Name="griddy">
 
-
+                
                 <Label Text="Login:" 
                        BackgroundColor="Transparent" 
                        
