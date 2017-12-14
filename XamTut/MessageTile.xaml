@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="XamTut.MessageTile">
+	<ContentView.Content>
+        <StackLayout>
+            <Label x:Name="TimeStamp" BackgroundColor="Transparent"/>
+            <Label x:Name="Message" BackgroundColor="Transparent" />
+           <!-- <Thickness Bottom="20" Left="40" Right="0" Top="20" /> -->
+        </StackLayout>
+	</ContentView.Content>
+</ContentView>

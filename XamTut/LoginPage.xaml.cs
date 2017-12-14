@@ -21,7 +21,7 @@ namespace XamTut
             else Login.FontSize = 24;
 
 
-           
+
         }
 
         /*
@@ -69,13 +69,10 @@ namespace XamTut
             Password = (sender as Entry).Text;
         }
 
-        /*
-         *  Temporary navigation handler to Test Conversation page. Called
-         *  after pressing ToolsPage button
-         */
-        void ToConversationPage(object sender, System.EventArgs e)
+
+        void Open_Tools_Page(object sender, System.EventArgs e)
         {
-            Navigation.PushAsync(new ConversationPage("Who cares"));
+            Navigation.PushAsync(new ToolsPage());
         }
     }
 }

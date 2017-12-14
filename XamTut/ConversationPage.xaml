@@ -4,21 +4,30 @@
     x:Class="XamTut.ConversationPage">
 	<ContentPage.Content>
         <StackLayout>
-            <ScrollView>
-        <Grid x:Name="grid">
-
-            </Grid>
-                </ScrollView>
+             
+            <Button Text="Receive message" Clicked="Handle_Receipt"
+                        />
             
-        <Grid x:Name="grid2">
-            <Entry Text="Type here..." 
+            <Grid x:Name="grid">
+               
+                <ScrollView Grid.RowSpan="13" 
+                            HorizontalOptions="FillAndExpand"
+                            Grid.ColumnSpan="5">
+                    
+                    <Grid x:Name="grid2">
+                        
+                    </Grid>
+
+                    
+                </ScrollView>
+                <Entry Text="Type here..." 
                    Completed="Complete_Message_Event" 
                    Grid.Row="13" Grid.ColumnSpan="4" 
                    HorizontalOptions="Fill"/>
-            <Button Text="Send" 
+                <Button Text="Send" 
                     Clicked="Send_Message_Event"
                     Grid.Row="13" Grid.Column="5"/>
-        </Grid>
-            </StackLayout>
+            </Grid>
+        </StackLayout>
 	</ContentPage.Content>
 </ContentPage>

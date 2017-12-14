@@ -1,21 +1,25 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using Xamarin.Forms;
 namespace XamTut
 {
-    public class Message
+    public class Message : IEnumerable<Message>
     {
-        String recipient, messageBody;
-
-        public Message(String recipient, String messageBody)
+        public Message()
         {
-            this.recipient = recipient;
-            this.messageBody = messageBody;
+        }
+        public String message { get; set; }
+        public String Recipient { get; set; }
+
+        public IEnumerator<Message> GetEnumerator()
+        {
+            throw new NotImplementedException();
         }
 
-        public String getMessageBody(){
-            return messageBody;
-        }
-        public String getRecipient(){
-            return recipient;
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
         }
     }
 }

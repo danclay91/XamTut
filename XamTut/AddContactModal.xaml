@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="XamTut.MessageTiles">
+             x:Class="XamTut.AddContactModal">
+    
 	<ContentView.Content>
-        <StackLayout>
-            <Label x:Name="TimeStamp" BackgroundColor="Aqua"/>
-            <Label x:Name="Message" BackgroundColor="Fuchsia" />
-        </StackLayout>
+        
 	</ContentView.Content>
+    
 </ContentView>

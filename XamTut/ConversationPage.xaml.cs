@@ -8,12 +8,12 @@ namespace XamTut
     public partial class ConversationPage : ContentPage
     {
         String recipient, bodyToSend;
+        int count = 0;
+        List<MessageTile> MessageTile = new List<MessageTile>();
         public ConversationPage(String recipient)
         {
             this.recipient = recipient;
             InitializeComponent();
-
-
         }
         /*
          * MUST HIT RETURN FOR THIS HANDLER TO BE CALLED
@@ -28,7 +28,8 @@ namespace XamTut
         /*
          *  Method used to set bodyToSend field equal to message Entry  
          */
-        public void setText(String text){
+        public void setText(String text)
+        {
             bodyToSend = text;
         }
 
@@ -40,15 +41,32 @@ namespace XamTut
         void Send_Message_Event(object sender, System.EventArgs e)
         {
             var stamp = DateTime.Now.ToString("hh:mm");
-            grid.Children.Add(new MessageTiles(new Message(recipient, bodyToSend), stamp ));
+            MessageTile.Add(new MessageTile(new Message { Recipient = recipient, message=bodyToSend }, stamp, Color.Red));
+            grid2.Children.Add(MessageTile[count]);
+            (MessageTile[count] as MessageTile).HorizontalOptions = LayoutOptions.FillAndExpand;
+            Grid.SetRow(MessageTile[count], count);
+            count++;
+        }
+        /*
+         * 
+         * 
+         */
+        void Handle_Receipt(object sender, System.EventArgs e)
+        {
+            ReceiveMessage(new Message { Recipient="Andrew", message="Hey bro" } );
         }
 
         /*
          *  Dummy receive message method that will be used for testing conversation page 
          */
-        public void ReceiveMessage(Message message){
+        public void ReceiveMessage(Message message)
+        {
             var stamp = DateTime.Now.ToString("hh:mm");
-            grid.Children.Add(new MessageTiles(message, stamp));
+            MessageTile.Add(new MessageTile(message, stamp, Color.Blue));
+            grid2.Children.Add(MessageTile[count]);
+            Grid.SetRow(MessageTile[count], count);
+            count++;
+
         }
 
     }

@@ -39,13 +39,20 @@
     <Compile Include="$(MSBuildThisFileDirectory)ToolsPage.xaml.cs">
       <DependentUpon>ToolsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)MessageTiles.xaml.cs">
-      <DependentUpon>MessageTiles.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)MessageTile.xaml.cs">
+      <DependentUpon>MessageTile.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)ConversationPage.xaml.cs">
       <DependentUpon>ConversationPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Message.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Messages.xaml.cs">
+      <DependentUpon>Messages.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)AddContactModal.xaml.cs">
+      <DependentUpon>AddContactModal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ProtoContact.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml" />
@@ -61,11 +68,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MessageTiles.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MessageTile.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)ConversationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Messages.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)AddContactModal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
