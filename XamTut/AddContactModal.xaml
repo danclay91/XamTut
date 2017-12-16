@@ -4,7 +4,15 @@
              x:Class="XamTut.AddContactModal">
     
 	<ContentView.Content>
-        
+        <StackLayout>
+            <Entry x:Name="Name_Entry" Text="Name" 
+                    HorizontalOptions="Fill"
+                    Completed="Name_Entry_Completed" />
+            <Entry x:Name="Number_Entry" Text="Number" 
+                    HorizontalOptions="Fill" 
+                     Completed="Number_Entry_Completed"/>
+            <Button x:Name="Submit" Text="Submit" Clicked="Submit_Clicked"/>
+        </StackLayout>
 	</ContentView.Content>
     
 </ContentView>

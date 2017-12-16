@@ -9,9 +9,25 @@ namespace XamTut
 {
     public partial class AddContactModal : ContentView
     {
+        String Name, Number;
         public AddContactModal()
         {
             InitializeComponent();
+        }
+
+        void Name_Entry_Completed(object sender, System.EventArgs e)
+        {
+            Name = (sender as Entry).Text;
+        }
+
+        void Number_Entry_Completed(object sender, System.EventArgs e)
+        {
+            Name = (sender as Entry).Text;
+        }
+
+        void Submit_Clicked(object sender, System.EventArgs e)
+        {
+           // Parent.
         }
     }
 }

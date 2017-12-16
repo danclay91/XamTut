@@ -14,7 +14,7 @@
         
        <ScrollView>
             
-            <ListView x:Name="Contact_Container">
+            <ListView x:Name="Contact_List" ItemSelected="OnItemSelected">
                 <ListView.ItemTemplate >
                     <DataTemplate>
                         <TextCell Text="{Binding Name}" Detail="{Binding Number}"/>

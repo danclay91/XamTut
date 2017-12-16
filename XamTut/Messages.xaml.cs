@@ -14,8 +14,10 @@ namespace XamTut
         public Messages()
         {
             InitializeComponent();
-            contactList.Add(new ProtoContact { Name = "Katlyn", Number = "as;lkja;sdlkfj" });
-            Contact_Container.ItemsSource = contactList;
+            contactList.Add(new ProtoContact(new ConversationPage("Andrew") ){ Name = "Andrew", Number = "4232906826" });
+            Contact_List.ItemsSource = contactList;
+            var addContactModal = new AddContactModal();
+
         }
 
 
@@ -24,9 +26,24 @@ namespace XamTut
          */
         void Add_Contact(object sender, System.EventArgs e)
         {
-            contactList.Add(new ProtoContact{Name="Andrew", Number="4232906826"});
+            contactList.Add(new ProtoContact(new ConversationPage("Andrew")){Name="Andrew", Number="4232906826"});
             count++;
         }
+
+        /*  Event Handler for ListView. As 
+         * 
+         */
+
+        void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if(e.SelectedItem != null){
+                var selection = e.SelectedItem as ProtoContact;
+                Navigation.PushAsync(selection.conversation);
+                Contact_List.SelectedItem = null;
+            }    
+        }
+
+
 
     }
 }
