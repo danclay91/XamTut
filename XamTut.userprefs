@@ -1,9 +1,12 @@
 ﻿<Properties StartupConfiguration="{B42E6633-E7C1-4AC3-AC48-8B2555A2D12C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="XamTut/ConversationPage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="XamTut/ToolsPage.xaml.cs">
     <Files>
       <File FileName="XamTut/Message.cs" Line="13" Column="1" />
-      <File FileName="XamTut/MessageTile.xaml.cs" Line="35" Column="10" />
+      <File FileName="XamTut/MessageTile.xaml.cs" Line="30" Column="10" />
       <File FileName="XamTut/ConversationPage.xaml.cs" Line="44" Column="69" />
+      <File FileName="XamTut/ToolsPage.xaml" Line="16" Column="13" />
+      <File FileName="XamTut/ToolsPage.xaml.cs" Line="53" Column="13" />
+      <File FileName="XamTut/Contacts.json" Line="4" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
