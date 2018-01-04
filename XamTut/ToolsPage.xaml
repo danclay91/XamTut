@@ -6,7 +6,14 @@
         <Grid>
             <Button x:Name="Messages" 
                     Text="Messages" 
-                    Clicked="ToMessagesPage"/>
+                    Clicked="ToMessagesPage"
+                    Grid.Column="0"
+            />
+            <Button x:Name="Node_Tester" 
+                    Text="Node Tester" 
+                    Clicked="Test_Node" 
+                    Grid.Column="1"
+            />
 
         </Grid>
 	</ContentPage.Content>

@@ -1,11 +1,17 @@
 ﻿<Properties StartupConfiguration="{B42E6633-E7C1-4AC3-AC48-8B2555A2D12C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="XamTut/Messages.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="XamTut/App.xaml.cs">
     <Files>
-      <File FileName="XamTut/Message.cs" Line="13" Column="1" />
-      <File FileName="XamTut/MessageTile.xaml.cs" Line="35" Column="10" />
-      <File FileName="XamTut/ConversationPage.xaml.cs" Line="44" Column="69" />
-      <File FileName="XamTut/Messages.xaml" Line="31" Column="1" />
-      <File FileName="XamTut/Messages.xaml.cs" Line="9" Column="48" />
+      <File FileName="XamTut/ConversationPage.xaml.cs" Line="22" Column="30" />
+      <File FileName="XamTut/ConversationPage.xaml" Line="24" Column="76" />
+      <File FileName="XamTut/Messages.xaml.cs" Line="57" Column="47" />
+      <File FileName="XamTut/Services/MockDataStore.cs" Line="40" Column="9" />
+      <File FileName="XamTut/Services/IDataStore.cs" Line="10" Column="23" />
+      <File FileName="XamTut/Services/MockDataStoreExample.cs" Line="14" Column="38" />
+      <File FileName="XamTut/Models/Message.cs" Line="11" Column="1" />
+      <File FileName="XamTut/MessageTile.xaml.cs" Line="13" Column="26" />
+      <File FileName="XamTut/Services/IDataStoreExample.cs" Line="6" Column="27" />
+      <File FileName="XamTut/Messages.xaml" Line="22" Column="41" />
+      <File FileName="XamTut/App.xaml.cs" Line="13" Column="40" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

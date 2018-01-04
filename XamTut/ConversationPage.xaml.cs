@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 using Xamarin.Forms;
+using XamTut.Models;
 
 namespace XamTut
 {
@@ -10,11 +12,33 @@ namespace XamTut
         String recipient, bodyToSend;
         int count = 0;
         List<MessageTile> MessageTile = new List<MessageTile>();
-        public ConversationPage(String recipient)
+        ObservableCollection<Message> UserMessages; 
+
+        public ConversationPage(string recipient)
         {
             this.recipient = recipient;
+            UserMessages = new ObservableCollection<Message>();
+            InitializeComponent();
+            messageList.ItemsSource = UserMessages;
+            var msg = LoadMessages();
+
+
+
+        }
+
+        async Task<List<Message>> LoadMessages()
+        {
+            List<Message> messages = await App.DataStore.GetMessagesAsync(this.recipient);
+            return messages;
+
+        }
+
+        public ConversationPage(){
             InitializeComponent();
         }
+
+
+
         /*
          * MUST HIT RETURN FOR THIS HANDLER TO BE CALLED
          *  Event Handler for message Entry completion
@@ -41,7 +65,7 @@ namespace XamTut
         void Send_Message_Event(object sender, System.EventArgs e)
         {
             var stamp = DateTime.Now.ToString("hh:mm");
-            MessageTile.Add(new MessageTile(new Message { Recipient = recipient, message=bodyToSend }, stamp, Color.Red));
+            MessageTile.Add(new MessageTile(new OldMessage { Recipient = recipient, message=bodyToSend }, stamp, Color.Red));
             grid2.Children.Add(MessageTile[count]);
             (MessageTile[count] as MessageTile).HorizontalOptions = LayoutOptions.FillAndExpand;
             Grid.SetRow(MessageTile[count], count);
@@ -53,13 +77,13 @@ namespace XamTut
          */
         void Handle_Receipt(object sender, System.EventArgs e)
         {
-            ReceiveMessage(new Message { Recipient="Andrew", message="Hey bro" } );
+            ReceiveMessage(new OldMessage { Recipient="Andrew", message="Hey bro" } );
         }
 
         /*
          *  Dummy receive message method that will be used for testing conversation page 
          */
-        public void ReceiveMessage(Message message)
+        public void ReceiveMessage(OldMessage message)
         {
             var stamp = DateTime.Now.ToString("hh:mm");
             MessageTile.Add(new MessageTile(message, stamp, Color.Blue));

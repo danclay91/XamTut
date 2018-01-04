@@ -14,10 +14,15 @@
         
        <ScrollView>
             
-            <ListView x:Name="Contact_List" ItemSelected="OnItemSelected">
-                <ListView.ItemTemplate >
+            <ListView x:Name="Contact_List" ItemSelected="OnItemSelected" ItemsSource="{Binding NewContactList}">
+                <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding Name}" Detail="{Binding Number}"/>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Text="{Binding Name}" LineBreakMode="NoWrap" FontSize="16" />
+                                <Label Text="{Binding Number}" LineBreakMode="NoWrap" FontSize="13" />
+                            </StackLayout>
+                        </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

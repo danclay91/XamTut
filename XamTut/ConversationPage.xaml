@@ -15,7 +15,18 @@
                             Grid.ColumnSpan="5">
                     
                     <Grid x:Name="grid2">
-                        
+                        <ListView x:Name="messageList">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <StackLayout>
+                                            <Label Text="{Binding Content}"></Label>
+                                            <Label Text="{Binding Sender}"></Label>
+                                        </StackLayout>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
                     </Grid>
 
                     

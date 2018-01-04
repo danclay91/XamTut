@@ -9,7 +9,7 @@ namespace XamTut
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>() ?? new MockDataStore();
+        public IDataStoreExample<Item> DataStore => DependencyService.Get<IDataStoreExample<Item>>() ?? new MockDataStoreExample();
 
         bool isBusy = false;
         public bool IsBusy

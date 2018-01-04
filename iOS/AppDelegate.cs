@@ -5,6 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
+
 namespace XamTut.iOS
 {
     [Register("AppDelegate")]
@@ -14,9 +15,6 @@ namespace XamTut.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
-
-
-
             return base.FinishedLaunching(app, options);
         }
     }

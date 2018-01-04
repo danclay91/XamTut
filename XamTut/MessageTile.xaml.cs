@@ -14,7 +14,7 @@ namespace XamTut
     {
         
         object message, timeString;
-        public MessageTile(Message message, String timeString, Color backGroundColor)
+        public MessageTile(OldMessage message, String timeString, Color backGroundColor)
         {
             this.BackgroundColor = backGroundColor;
             this.message = message;
