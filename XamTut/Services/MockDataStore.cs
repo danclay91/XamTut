@@ -14,9 +14,9 @@ namespace XamTut.Services
             messages = new List<Message>();
 
             //Add Mock Messages
-            messages.Add(new Message() { Sender="Danny", Recipient="Andrew", Content="YO"});
-            messages.Add(new Message() { Sender = "Danny", Recipient = "Andrew", Content = "Bro" });
-            messages.Add(new Message() { Sender = "Andrew", Recipient = "Danny", Content = "Hey" });
+            messages.Add(new Message() { Sender="Danny", Recipient="Andrew", Content="Blue messages"});
+            messages.Add(new Message() { Sender = "Danny", Recipient = "Andrew", Content = "from me" });
+            messages.Add(new Message() { Sender = "Andrew", Recipient = "Danny", Content = "Red messages from me" });
             messages.Add(new Message() { Sender = "Nobody", Recipient = "Danny", Content = "Poo" });
             messages.Add(new Message() { Sender = "Nobody", Recipient = "Peabody", Content = "Pooooop" });
 
@@ -34,7 +34,12 @@ namespace XamTut.Services
                     messagesToReturn.Add(message);
                 }
             }
-            return messagesToReturn;
+            return await Task.FromResult(messagesToReturn);
+        }
+
+        public async Task<bool> AddMessageAsync(Message message){
+            messages.Add(message);
+            return await Task.FromResult(true);
         }
 
 

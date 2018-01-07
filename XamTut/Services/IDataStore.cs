@@ -8,5 +8,6 @@ namespace XamTut.Services
     public interface IDataStore
     {
         Task<List<Message>> GetMessagesAsync(string username);
+        Task<bool> AddMessageAsync(Message msg);
     }
 }
